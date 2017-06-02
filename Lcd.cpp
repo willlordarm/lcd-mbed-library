@@ -45,6 +45,16 @@ void Lcd::setPosition(char ligne, char colonne)
     wait_ms(1);
     return;
 }
+void Lcd::clear_LCD(void){
+    CS = 0;
+    RS_LCD=0;
+    writeCmd_LCD(0x01); //Clear Display
+    wait_ms(2);         //delay 2 ms
+    RS_LCD =1;
+    CS=1;
+    return;
+}
+
 void Lcd::init_SPI(void)
 {
     // Chip must be deselected
