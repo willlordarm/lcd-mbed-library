@@ -13,7 +13,7 @@
  * {
  *     ecran.init_LCD();
  *     char i=1,j=1;
- *     char str[]="J'affiche quelque\0";
+ *     char str[]="J'affiche quelque";
  *     while(1) {
  *         ecran.writeStr_LCD(str,i,j);
  *     }
